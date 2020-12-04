@@ -1,0 +1,266 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Fitness Fantasy I\\
+{\footnotesize \textsuperscript{*}Software Engineering Project 2020}
+\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Tristan Solus}
+\IEEEauthorblockA{\textit{dept. Electronical Engineering} \\
+\textit{École supérieure d'ingénieurs Léonard-de-Vinci}\\
+Paris, France \\
+tristan.solus@gmail.com}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Ugo Demy}
+\IEEEauthorblockA{\textit{dept. Electronical Engineering} \\
+\textit{École supérieure d'ingénieurs Léonard-de-Vinci}\\
+Paris, France \\
+ugo.demy82@gmail.com}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Charles Delemazure}
+\IEEEauthorblockA{\textit{dept. Electronical Engineering} \\
+\textit{École supérieure d'ingénieurs Léonard-de-Vinci}\\
+Paris, France \\
+charles.delemazure@gmail.com}
+}
+
+\maketitle
+
+\begin{abstract}
+To motivate any person who would want to lose weight and do fitness we want to create a videogame-like app where you could gain experience and rewards based on what you eat and how much you exercise. Your progress could then be seen by others such as your friends or the people in your same training area through your profile. Thanks to the rewarding system and the progression’s overview, the user will keep his motivation to exercise regularly.
+\end{abstract}
+
+\begin{IEEEkeywords}
+sports, videogame, motivation, efforts, compare
+\end{IEEEkeywords}
+
+\section{Introduction}
+\subsection{Role Assignments}
+\begin{table}[]
+\begin{tabular}{lll}
+\textbf{Roles}      & \textbf{Name} & \textbf{Task Description}                                                                                                                                                                 \\
+User / Customer     & Tristan       & \begin{tabular}[c]{@{}l@{}}- Eat healthy\\ - Exercise\\ - Fill what he did and is efforts on the webapp\\ - Stay motivated thanks to quests and achievements\end{tabular}                 \\
+Software Developer  & Ugo           & \begin{tabular}[c]{@{}l@{}}- Aid in the innovation and creation\\ - Fix errors and work on technical issues\\ - Improve the performance of the webapp and upgrade interfaces\end{tabular} \\
+Development Manager & Charles       & \begin{tabular}[c]{@{}l@{}}- Be the contact point for the customer\\ - Team management\\ - Develop growth strategies and plans\end{tabular}                                              
+\end{tabular}
+\end{table}
+
+\subsection{Proposal}
+As the world have been quarantined for too long this year, a lot of us have lost the motivation to move and exercise. Even for twenty-year-old sport addicts like us. After trying motivational videos on YouTube, personal training on apps or even push-ups in our rooms, our eager for training started to decay little by little. After weeks, we realized that we lacked goals, objectives, achievements in order to stay motivated. We needed something that lasts longer than 30-days programs, and something more appealing than just a reminder on a cellphone. We needed challenge. We found apps like Fitness RPG which are close to what we were looking for, using a system of pedometer and an RPG-like gameplay. However, that was not exactly what we needed. We want actual exercises, a proper ranking, and above all, results. That is why we came up with the idea of Fitness Fantasy I.
+
+\section{Requirements}
+\subsection{Domain Analysis}
+What we want to create is an app that could motivate people to exercise even if they do not particularly want to. For that matter we first have to identify what are the sources of an efficient motivation: 
+\begin{itemize}
+\item Have a goal
+\item Keep an eye on your progress
+\item Get advices
+\item Earn rewards
+\end{itemize}
+Thus, we want to provide the users a clean experience with easy access to their results, their progressions. That necessarily goes through an app in which we offer them various services. First, as the users regularly fill in their information, we can provide curves and graphs for them to see their evolution through time and stay motivated. Then we want to offer them some personalized training based on their actual strengths and the goal they want to reach. We can adapt the training along with their progress and their feedbacks. Finally, we want our sport app to remain fun and enjoyable. For that extent we will design it like a videogame, submitting the user quests to complete in order to gain experience and rewards.
+
+\subsection{Requirements}
+\begin{flushleft}
+    \br
+    As a user: 
+\end{flushleft}
+\begin{flushleft}
+    \textit
+    	Classic account management
+\end{flushleft}
+\begin{itemize}
+\item I want to be able to login.
+\item I want to be able to logout.
+\item I want to be able to change my password.
+\item I want to be able to create a new account.
+\item I want to have a unique username.
+\item I want to be able to delete my account. 
+\item I want to keep my account even if I don't use the app for a long time or lose my phone.
+\item I want to be able to forget my password.
+\end{itemize}
+
+\begin{flushleft}
+    \textit
+    	See progression and adapt training
+\end{flushleft}
+\begin{itemize}
+\item I want to set my limits when I sign up.
+\item I want to give feedback on the difficulty of my exercises.
+\item I want to be able to enter additional exercise I made various intensity levels and time.
+\item I want to be able to give regular updates on my weight, height, age, hours of sleep, km walked.
+\item I want to have adapted exercise proposed to me.
+\item I want to be able to fill out my goals and set objectives.
+\item I want to be able to oversee my progression through graphs.
+\item I want to pause my training for 1 week or more.
+\end{itemize}
+
+\begin{flushleft}
+    \textit
+    	Videogame
+\end{flushleft}
+\begin{itemize}
+\item I want to have little tips for health.
+\item I want to earn rewards thanks to my efforts.
+\item I want to have daily quests to complete.
+\item I want to see my experience levels and current stats.
+\item I want to collect achievements.
+\item I want to participate to special events.
+\end{itemize}
+
+\begin{flushleft}
+    \br
+    As a developer: 
+\end{flushleft}
+\begin{itemize}
+\item I want to add further functionalities if necessary. 
+\item I want tests to ensure the functionality is still provided after I changed the software. 
+\item I want to have the feedback from the users
+\end{itemize}
+
+\section{Development environment}
+\subsection{Choice of software development platform}
+As the main goal of our project is to build an app that could be used by everyone, we first thought we would build a classic app because it is much more convenient than a website designed for computers.  But it requires at least two different version if we want it to be used on both IOS and Android. Considering we don’t have that much time, we had to come up with another solution. We thought about making it just for IOS, because all of us use iPhones, but the price of the developer license and the complexity of working with Swift and the Apple environment seemed like a challenge that we would not be able to overcome. We finally came up with the idea of the webapp, which allows the user to use either IOS or Android, it is free and accessible to anyone.  
+
+The platform we will use is the web and we will use all the languages related to it: JavaScript, HTML, CSS for the Frontend and we will more likely use Python for our Backend. These languages allow us to use the React library which is perfect for interactive Web Apps. We will use our private laptop as resources, which are 3 Windows 10.0.18363 64 bits processors with 2 Intel(R) Core (TM) i7, 1 Intel(R) Core (TM) i3 with respectively 16, 8 and 4 Go of RAM.
+
+We don’t plan on buying anything, but we might need to subscribe to online courses at some point if we don’t find the proper answers to our problems online and for free. Moreover, we plan on working at least 5h each per week but because we don’t really know how much we could forfeit for 1h we can give an overall price. 
+
+\subsection{Softwares in use}
+A lot of gym application exist on the market. Some are great for people who are already athletic, while others are better for beginners. Some have one area of focus, such as nutrition, proposing meal plans or list of food to eat and avoid or music for workouts. While others take a more all-in-one approach. Most of them are free for a trial period but you must buy a subscription afterwards. The user won’t need to buy a subscription with our webapp. To see the app in use we compared the best gym app on the market. The best workout app for a user should cover the exercises he is interested in at a level that is accessible to him.
+
+\begin{flushleft}
+    \textit
+    Nike training club 
+\end{flushleft}
+One of the most popular one on the market is Nike Training Club. It is a family-friendly workout app with nearly 200 different workouts that let you do strength, cardio, yoga, and much more without needing to go to the gym or use any equipment. This is what we are looking for our webapp, the possibility to stay at home and do sports because of the COVID19 situation. Nike Training Club has workouts on-demand that are recommended to you based on the information you provide when you first sign up. You can also see the full list of workouts or set up a training plan. The exercises are shown on video. 
+
+\begin{flushleft}
+    \textit
+    8fit  
+\end{flushleft}
+The 8fit app allows you to set up a custom workout and diet plan to achieve your health goals as easily as possible. The app includes a guided program that helps you eat better, lose weight, or get fit with a variety of personalized meal plans, workouts, and content that explains how different nutrients and workouts benefit you. This differentiate us from our webapp. We prefer to focus on pushing the user to do sports and guide him to achieve his goals through game-looking design. 8fit brings together on-demand workouts and meal planning. The app creates a personalized program for your diet and exercise based on the results you want to see. It's for people who needs a lot of instructions and advices. You choose a goal, whether it be to lose weight, get fitter, or gain muscle. Then you make your goal more specific if you want to lose weight or gain muscles etc. 8fit takes into consideration a lot of details about you when creating your fitness plan, such as what time of day you exercise and whether you're an ambitious cook or prefer simple meal prep. It's an all-in-one fitness plan that you can customize to your tastes. 
+
+
+\begin{flushleft}
+    \textit
+    The Johnson & Johnson Official 7 Minute Workout 
+\end{flushleft}
+The Johnson & Johnson Official 7 Minute Workout is a circuit training workout app that propose you some exercise at different intensities depending on your level. You don’t need any equipment, you just need 7 minutes in your day. This application is perfect for short workout, but this is not what we are looking for. We are looking for short workouts yes, but longer than 7 minutes because we think it is not enough to achieve a satisfying sport session. In Johnson’s app, you can also create custom workouts by stitching together exercises that are right for you. We won’t integrate this function in our webapp, but we are planning to offer the user the possibility to add on the webapp how much sports he did beside our webapp’s exercise. The interface is attractive and intuitive. You can swipe in one direction to change the music and in another direction to have a timer.
+
+\subsection{Task distribution}
+\begin{table}[]
+\begin{tabular}{ll}
+Charles Delemazure & \begin{tabular}[c]{@{}l@{}}Front end: Profile page, workout page, quests system\\ Design of the pages\\ Documentation\end{tabular}                                                              \\
+Ugo Demy           & \begin{tabular}[c]{@{}l@{}}Back end: building the data base, creating charts and graphs with the users' data, post-exercise feedback\\ Back end/front end junction\\ Documentation\end{tabular} \\
+Tristan Solus      & \begin{tabular}[c]{@{}l@{}}Front end: Homepage, sign-in/log-in page, navigation between the pages\\ Back end/front end junction\\ Documentation\end{tabular}                                   
+\end{tabular}
+\end{table}
+
+\section{Specifications}
+\subsection{Classic account management}
+\begin{itemize}
+\item Whenever a user enters the webapp, he should be able to login with his username and his password or sign up if he does not have an account yet. If the password or the username is not correct, it displays a message to prevent the user and erase the password.
+\item By clicking on the “sign up” button, it opens a new page where he can choose a unique username, a password, an email address, his actual maximum repetitions per set... If the username is already used, it displays a message to prevent the user and propose 2 similar usernames with random numbers at the end. The user must fulfill all the spaces on this page to create his account. 
+\item These entries will be stored on the backend database to be compared with for the login part.
+\item In the account page, the user will be able to access the settings. From here, he will be able to change his username, his password and even delete his account.
+\end{itemize}
+
+\subsection{See progression}
+\begin{itemize}
+\item On the main page, the user will be able to select the “progression” menu where he will be asked rather to enter new data about his current weight, height, km walked, or hours slept. 
+\item These data will be saved in the database and whenever we get 2 entries of the same type (e.g. 84kg on 15/10/2019 and 78kg on 3/5/2020) we can start building a graph in the according category that we display afterwards on the website. 
+\item The user will then be able to see his updated evolution through time and determine if he fulfilled or not his objectives
+\end{itemize}
+
+\subsection{Adapt Training}
+\begin{itemize}
+\item First, when the user signs up, he will have to give us a maximum number of repetitions for specific physical exercises everyone can do at home. 
+\item These numbers will be saved in our database to be able to adapt the training quests we will ask the user to complete and see his evolution. 
+\item When the user starts a quest, he will be asked to warm up with some simple exercises we will provide him. Then, he will give a feedback about how he is feeling today: “Are you feeling great today?”. He will be able to choose between 5 different answers: “Not at all / Not really / As usual / Yes! / Never been in such a great shape”. 
+\item By getting this first feedback, we will adapt his number of exercises, repetitions per set, rest time and experience and stats gained from the quest. Indeed, if the user is not feeling good at all one day but still managed to make time for exercising and completing his task, he will earn a lot more experience.
+\item Now comes the exercise time! Along with representative pictures, series of exercises will be displayed to the user for him to complete each one of them. 
+\item At the end, he will be given extra stats and experience depending on the difficulty of the quest. He will also be asked to give a feedback about how he is feeling after the workout.
+\end{itemize}
+
+Did you find the quest was? (select one)
+\begin{itemize}
+\item Very hard
+\item Hard
+\item Appropriate
+\item Easy
+\item Too easy
+\end{itemize}
+
+If you found the quest hard, which exercises were the most difficult? (select one or many)
+\begin{itemize}
+\item Exercise 1
+\item Exercise 2
+\item Exercise 3
+\item Exercise 4
+\item Exercise 5
+\end{itemize}
+
+\begin{itemize}
+\item With it, our program will adapt the difficulty of the training to be the most appropriate possible. 
+\item Moreover, the user will be able to enter extra physical activities if he does so, indicating the level of intensity and the duration of his effort.
+\end{itemize}
+
+\subsection{Videogame}
+\begin{itemize}
+\item In order to provide an entertaining app, we would like to give it a videogame look. 
+\item Following the principle of a roleplay game, the user will earn experience, unlock milestones, or get points on an approximation of what his statistics in a game would be. As well as in RPGs, the user will be given daily quests to achieve, like running 10 Km, and when it is done, he will earn rewards and experience. 
+\item To stay motivated, the user will be able to oversee his progress from the very beginning of his journey, illustrated by graphs and pictures if his is willing to. 
+\item To keep the user entertained, we plan on organizing special event during certain times like Christmas or Easter, with specific quests and unique achievements.
+\end{itemize}
+
+\section{Architecture Design& Implementation}
+\subsection{Software Component Description}
+\begin{flushleft}
+    \br
+    Sign-up 
+\end{flushleft} 
+The Sign-up module allows us to collect the data from the user in order to provide the proper exercises for him and allow him to log-in. The data we collect is: his ID, password, e-mail address, height, weight and all the basic information about his current skills (number of repetition and training intensity). 
+
+\begin{flushleft}
+    \br
+    Log-in
+\end{flushleft} 
+The Log-in module allows the user to log-into the WebApp once he is already registered and we have already collected the data we needed. Once he is logged-in, the user will be redirected to the Home page. 
+
+\begin{flushleft}
+    \br
+    Unregistered Home
+\end{flushleft}  
+The Unregistered Home module is the first module that will be displayed for the user, even if he has already been registered. This module is supposed to be appealing and to make any user want to register to our website and want to begin a new journey with us. The user chooses to be redirected to the Log-in or the Sign-up page, depending on what he desires. 
+
+\begin{flushleft}
+    \br
+    Home Registered
+\end{flushleft} 
+Once the user has logged-in, this module comes up and show him his daily quests to let him know about his goal of the day and by doing it he’ll gain experience. The user will also be able to see some tips for trainings or his global health. 
+Profile: The profile page is where the user can find all his personal information and edit them. When his weight changes, it is where he will enter the modification to allow us to provide his progression graph. If there is any other change like his password or his email address he wants to make, it is also the page where he can do it. 
+
+\begin{flushleft}
+    \br
+    Progression
+\end{flushleft}
+The progression module is the module where the user will oversee his progression and his statistics like his bodyweight variation or the days the user has done physical exercises. He will be able to check which quests he has already done and how many times he has done them. 
+
+\begin{flushleft}
+    \br
+    Workout
+\end{flushleft}
+The workout module provides to the user different types of programs, of various intensities. It also allows the user to submit other forms of exercise or physical activity he has done that were not given by our WebApp. The user will be able to give a feedback on his exercise so we can adjust the intensity of the exercise we propose.
+
+
