@@ -1,0 +1,122 @@
+.background {
+    background: #000000;
+    background: linear-gradient(to right, #161616,#000000);
+    padding: 200px 0;
+}
+
+.container {
+    margin: 80px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 2px 10px rgba(0, 0, 0, 0.24);
+    margin-top: 0px;
+    background: white;
+}
+
+
+.ex_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.image {
+    margin-top: 10px;
+    margin-left:0px;
+    min-width:300px;
+    max-width:301px;
+}
+
+
+
+.main__btn {
+    font-size: 30px;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    margin-top: 200px;
+    margin-left: 43%;
+}
+
+    .main__btn a {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-decoration: none;
+    }
+
+    .main__btn:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #302b63;
+        transition: all 0.35s;
+        border-radius: 4px;
+    }
+
+    .main__btn:hover {
+        color: white;
+    }
+
+        .main__btn:hover:after {
+            width: 100%;
+        }
+
+.heading {
+    font-size: 60px;
+    margin-bottom: 24px;
+    text-align: center;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.ex_title {
+    font-size:30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.title_content {
+    font-size:22px;
+    margin-left:20px;
+    margin-bottom:10px;
+    margin-top:10px;
+    font-weight:700;
+    margin-right:0px;
+}
+
+.title_content a {
+    font-size:17px;
+    font-weight:300;
+}
